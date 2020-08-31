@@ -1,0 +1,2 @@
+# Extract Subdomains Form riddler.io
+curl -s "https://riddler.io/search/exportcsv?q=pld:$1" | grep -Po "(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | sort -u 

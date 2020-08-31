@@ -1,0 +1,2 @@
+# Subdomain Bruteforcer with FFUF
+ffuf -u https://FUZZ.$1 -w $2 -v | grep "| URL |" | awk '{print $4}'

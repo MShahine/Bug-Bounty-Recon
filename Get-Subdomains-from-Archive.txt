@@ -1,0 +1,2 @@
+# Get Subdomains from Archive
+curl -s "http://web.archive.org/cdx/search/cdx?url=*.$1/*&output=text&fl=original&collapse=urlkey" | gsed -e 's_https*://__' -e "s/\/.*//" | sort -u

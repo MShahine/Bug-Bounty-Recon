@@ -1,0 +1,2 @@
+# Get Subdomains from BufferOver.run
+curl -s https://dns.bufferover.run/dns?q=.$1 |jq -r .FDNS_A[]|cut -d',' -f2|sort -u
